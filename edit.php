@@ -1,5 +1,5 @@
 <?php
-    $conn = mysqli_connect($conn, 'itf-lab12.mysql.database.azure.com', 'it63070010@itf-lab12', 'PJPvjx84', 'itflab', 3306);
+    $conn = mysqli_connect('itf-lab12.mysql.database.azure.com', 'it63070010@itf-lab12', 'PJPvjx84', 'itflab', 3306);
     $sql = 'SELECT * FROM guestbook WHERE ID = '.$_GET['ID'].'';
     $query = mysqli_query($conn, $sql);
     if(!$query) {
