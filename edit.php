@@ -19,15 +19,15 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </head>
 <body>
-  <form action = "insert.php" method = "post">
+  <form action = "update.php" method = "post">
     <input type="text" name="ID" value="<?php echo $data['ID']; ?>"> <br>
     Name:<br>
-    <input type="text" name = "Name" placeholder="Enter Name"> <br>
+    <input type="text" name = "Name" value="<?php echo $data['Name']; ?>" placeholder="Enter Name"> <br>
     Comment:<br>
-    <textarea rows="10" cols="20" name = "Comment" placeholder="Enter Comment"></textarea><br>  
+    <textarea rows="10" cols="20" name = "Comment" value="<?php echo $data['Comment']; ?>" placeholder="Enter Comment"></textarea><br>  
     Link:<br>
-    <input type="text" name = "Link" placeholder="Enter Link"> <br><br>
-    <button type="submit" class="btn btn-outline-secondary">Submit</button>
+    <input type="text" name = "Link" value="<?php echo $data['Link']; ?>" placeholder="Enter Link"> <br><br>
+    <button type="submit" class="btn btn-primary">Submit</button>
   </form> 
 </body>
 </html>
