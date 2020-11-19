@@ -20,6 +20,7 @@
 </head>
 <body>
   <form action = "insert.php" method = "post">
+    <input type="text" name="ID" value="<?php echo $data['ID']; ?>"> <br>
     <p class="text-muted">Name:<br></p>
     <input type="text" name = "Name" placeholder="Enter Name"> <br>
     <p class="text-muted">Comment:<br></p>
