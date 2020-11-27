@@ -29,12 +29,15 @@ $res = mysqli_query($conn, 'SELECT * FROM guestbook');
 <?php
 while($Result = mysqli_fetch_array($res))
 {
+    $A = $Result['Product'];
+    $B = $Result['Amount'];
+    $Total = $A * $B;
 ?>
   <tr id="<?php echo $Result['ID'];?>">
     <td><?php echo $Result['Product'];?></div></td>
     <td><?php echo $Result['Price'];?></td>
     <td><?php echo $Result['Amount'];?></td>
-    <td><?php echo "A * B = $Total";?></td>
+    <td><?php echo $Total;?></td>
     <td align="center">
       <a href="delete1.php?ID=<?php echo $Result['ID'];?>" class="btn btn-secondary">DEL</a>
     </td>
