@@ -8,6 +8,9 @@
 </head>
 <body>
 <?php
+$A = $_POST['Product']
+$B = $_POST['Amount']
+$Total = $A * $B;
 $conn = mysqli_init();
 mysqli_real_connect($conn, 'itf-lab12.mysql.database.azure.com', 'it63070010@itf-lab12', 'PJPvjx84', 'itflab', 3306);
 if (mysqli_connect_errno($conn))
@@ -34,7 +37,7 @@ while($Result = mysqli_fetch_array($res))
     <td><?php echo $Result['Product'];?></div></td>
     <td><?php echo $Result['Price'];?></td>
     <td><?php echo $Result['Amount'];?></td>
-    <td><?php echo $Result['Total'];?></td>
+    <td><?php echo "A * B = $Total";?></td>
     <td align="center">
       <a href="delete1.php?ID=<?php echo $Result['ID'];?>" class="btn btn-secondary">DEL</a>
     </td>
@@ -53,3 +56,4 @@ mysqli_close($conn);
 ?>
 </body>
 </html>
+
