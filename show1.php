@@ -27,9 +27,6 @@ $res = mysqli_query($conn, 'SELECT * FROM guestbook');
     </tr>
   </thead>
 <?php
-$Product = $_POST['Product']
-$Amount = $_POST['Amount']
-$Total = $Product * $Amount;
 while($Result = mysqli_fetch_array($res))
 {
 ?>
