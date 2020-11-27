@@ -28,9 +28,9 @@ $res = mysqli_query($conn, 'SELECT * FROM guestbook');
   </thead>
 <?php
 while($Result = mysqli_fetch_array($res))
-{
     $A = $Result['Product'];
     $B = $Result['Amount'];
+{
     $Total = $A * $B;
 ?>
   <tr id="<?php echo $Result['ID'];?>">
