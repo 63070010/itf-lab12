@@ -8,9 +8,6 @@
 </head>
 <body>
 <?php
-$A = $_POST['Product']
-$B = $_POST['Amount']
-$Total = $A * $B;
 $conn = mysqli_init();
 mysqli_real_connect($conn, 'itf-lab12.mysql.database.azure.com', 'it63070010@itf-lab12', 'PJPvjx84', 'itflab', 3306);
 if (mysqli_connect_errno($conn))
