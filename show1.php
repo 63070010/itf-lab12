@@ -8,9 +8,6 @@
 </head>
 <body>
 <?php
-$Product = $_POST['Product']
-$Amount = $_POST['Amount']
-$Total = $Product * $Amount;
 $conn = mysqli_init();
 mysqli_real_connect($conn, 'itf-lab12.mysql.database.azure.com', 'it63070010@itf-lab12', 'PJPvjx84', 'itflab', 3306);
 if (mysqli_connect_errno($conn))
@@ -30,6 +27,9 @@ $res = mysqli_query($conn, 'SELECT * FROM guestbook');
     </tr>
   </thead>
 <?php
+$Product = $_POST['Product']
+$Amount = $_POST['Amount']
+$Total = $Product * $Amount;
 while($Result = mysqli_fetch_array($res))
 {
 ?>
